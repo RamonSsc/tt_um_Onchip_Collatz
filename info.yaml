@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "Collatz Conjecture"      # Project title
+  title:        "Onchip-UIS Collatz Conjecture"      # Project title
   author:       "Sergio Sebastian Oliveros Sepulveda"      # Your name
   discord:      "zhord0326"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "A circuit that computes the Collatz orbit"      # One line description of what your project does
