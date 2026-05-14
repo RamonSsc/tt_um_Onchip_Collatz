@@ -63,26 +63,26 @@ module tt_um_ccollatz_SO(
             inicio:
                 if(start)
                     if(ui_in[0] <= 1'b0)
-                        futuro <= par;
+                        futuro = par;
                     else 
-                        futuro <= impar;
+                        futuro = impar;
                 else 
-                    futuro <= inicio;
+                    futuro = inicio;
                     
             par:
                 if (n!=8'd2 && n[1] == 1'b0)
-                    futuro <= par;
+                    futuro = par;
                 else if (n!=8'd2 && n[1] != 1'b0) 
-                    futuro <= impar;
+                    futuro = impar;
                 else 
-                    futuro <= mantener;
+                    futuro = mantener;
                     
             impar:
-                futuro <= par;              
+                futuro = par;              
             mantener:
-                futuro <= mantener;
+                futuro = mantener;
             default:
-                futuro <= inicio;
+                futuro = inicio;
         endcase
     end
     ////////////////Logica de salida//////////////////
