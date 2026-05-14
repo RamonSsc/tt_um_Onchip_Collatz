@@ -28,7 +28,7 @@ module tt_um_ccollatz_SO(
     reg [7:0] n;
     reg ec,rc;
     reg [1:0] rn;
-    reg [1:0] presente = inicio;
+    reg [1:0] presente;
     reg [1:0] futuro;
     reg [7:0] uio_outr;
     assign uio_out = uio_outr;
@@ -50,8 +50,13 @@ module tt_um_ccollatz_SO(
         endcase 
            ////////////////Maquina de estados//////////////////
     ////////////////Registro de estados//////////////////
-    always@(posedge clk)
-        presente <= futuro;
+    always @(posedge clk) begin
+        if (!rst_n) begin // Reset active low
+            presente <= inicio;
+        end else begin
+            presente <= futuro;
+        end
+    end
     ////////////////Logica del estado siguiente//////////////////
     always@(*) begin
         case(presente)
