@@ -9,12 +9,11 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+The circuit takes an 8-bit input value and produces two outputs: the number of iterations required to reach 1 and a status bit indicating whether the calculation is in progress or complete. Once the process is finished, the circuit keeps the value of the iterations indefinitely so that it can be checked.
 
 ## How to test
+To test the circuit it is necessary to have as input the clock signal, a number of maximum 8 bits and the rst_n signal to start the iterations. It is taken into account that rst_n is at 0 when it is active, so once it takes this value, the circuit begins to perform the calculations until it reaches 1, then it keeps the values.
 
-Explain how to use your project
 
 ## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+None external Hardware, just use switches.
